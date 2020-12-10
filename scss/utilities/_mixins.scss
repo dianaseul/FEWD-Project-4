@@ -1,0 +1,13 @@
+/* ============================================= */
+/*                MIXINS                        */
+/* ============================================= */
+
+/*Extra credit - hover effect for buttons & css transition*/
+@mixin button-color($background-color) { 
+    background-color: $background-color;
+    transition: background-color 500ms ease-in-out;
+    &:hover {
+        background-color: lighten($background-color, 15%);
+        transition: background-color 700ms ease-in-out;
+    } 
+} 

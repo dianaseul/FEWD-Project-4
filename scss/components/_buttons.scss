@@ -5,30 +5,28 @@
 .btn {
     margin-top: 15px;
     width: 100%;
-    color: #fff;
+    color: $color-white;
     border: none;
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
+    &.default { /* extra credit - nested selector structure using parent selector & */
+      @include button-color($color-link-blue); /* mixin background color and hover effect on buttons + css transition */
+    }
+    &.error {
+      @include button-color($color-dusty-rose);
+    }
+    &.info {
+      @include button-color($color-purple);
+    }
+    &.success {
+      @include button-color($color-green);
+    }
+    &.warning {
+      @include button-color($color-orange);
+    }
   }
   
-  .default {
-    background-color: #51ddfc;
-  }
   
-  .error {
-    background-color: #e4757a;
-  }
   
-  .info {
-    background-color: #927bc1;
-  }
-  
-  .success {
-    background-color: #63cc82;
-  }
-  
-  .warning {
-    background-color: #fd7856;
-  }
   
